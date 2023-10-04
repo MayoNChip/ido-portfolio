@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import MainLayout from "../layouts/main-layout.astro";
+import { projects } from "../lib/projects";
+import Projects from "../pages/components/Projects";
+---
+
+<MainLayout />
+<div class="w-full flex space-y-4 flex-col items-center py-4 px-6">
+  <Projects client:only />
+  <!-- {
+    projects?.map((project) => {
+      return (
+        <div class="md:w-8/12 min-w-2/3 rounded-lg bg-secondary min-h-[150px] flex p-4 justify-between shadow-color/30 shadow-lg">
+          <h1 class="md:text-4xl text-lg text-accent">{project.title}</h1>
+          <Image
+            class="rounded md:w-[400px] h-auto w-2/3"
+            src={project.image}
+            alt={project.description}
+          />
+        </div>
+      );
+    })
+  } -->
+</div>
